@@ -310,6 +310,7 @@ void initializeTPSPaymentNetworksWithConditionalMappings() {
         _account = _stripeAccount;
     }
     stripeAccount = _account;
+    [STPAPIClient sharedClient] setStripeAccount:_account];
 }
 
 -(void)deviceSupportsApplePay:(RCTPromiseResolveBlock)resolve
